@@ -1,0 +1,23 @@
+BASE DE DATOS: 
+Host: database-parcial.c6fxrh1itneq.us-east-1.rds.amazonaws.com
+Puerto: 3306
+Nombre: database-parcial
+Nombre maestro: admin
+Contraseña: parcial777
+
+DROP DATABASE IF EXISTS api_usuarios;
+
+CREATE DATABASE api_usuarios CHARSET utf8mb4;
+
+USE api_usuarios;
+
+CREATE TABLE usuarios (
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(255) NOT NULL UNIQUE,
+contraseña VARCHAR(255) NOT NULL,
+perfil VARCHAR(255),
+isesion VARCHAR(255)
+);
+INSERT INTO usuarios (nombre, contraseña, perfil, isesion) VALUES
+('Tuki', '1234', 'images_parcial/wqbug8ny7jorbkixu9x8', '13:45:30'),
+('Demo', 'tarrifu', 'images_parcial/wqbug8ny7jorbkixu9x8', '13:45:30');
